@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Bitcoin On Docker
+Comment=Bitcoin on docker
+Exec=bitcoin-onDocker.sh
+Terminal=false
+Type=Application
+Icon=bitcoin-onDocker
+Categories=Development;
