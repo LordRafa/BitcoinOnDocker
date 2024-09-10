@@ -31,8 +31,6 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 VOLUME "$APP_HOME"
 RUN ln -s "$APP_HOME" "/home/$USER"
 
-RUN useradd -r "$USER"
-
 RUN groupadd -g "$GID" -r "$USER"
 RUN useradd -u "$UID" -g "$GID" -r "$USER"
 
