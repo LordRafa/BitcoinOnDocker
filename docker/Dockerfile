@@ -18,7 +18,7 @@ RUN apt-get install -y build-essential libtool autotools-dev\
     libboost-dev libsqlite3-dev libminiupnpc-dev libnatpmp-dev\
     libzmq3-dev systemtap-sdt-dev qtbase5-dev qttools5-dev\
     qttools5-dev-tools qtwayland5 libqrencode-dev gawk git\
-    bash-completion
+    bash-completion vim
 
 RUN git clone https://github.com/bitcoin/bitcoin.git --depth 1 --branch "$BITCOIN_VERSION" /tmp/bitcoin && \
     cd /tmp/bitcoin && \
