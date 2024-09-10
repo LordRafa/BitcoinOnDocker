@@ -6,6 +6,7 @@ LABEL maintainer="Rafael Waldo Delgado Doblas"
 ARG UID=1000
 ARG GID=1000
 ARG USER="ondocker"
+ARG BITCOIN_VERSION="v27.1"
 ENV APP_HOME="/App_Home"
 
 ENV DEBIAN_FRONTEND="noninteractive"
@@ -17,8 +18,6 @@ RUN apt-get install -y build-essential libtool autotools-dev\
     libboost-dev libsqlite3-dev libminiupnpc-dev libnatpmp-dev\
     libzmq3-dev systemtap-sdt-dev qtbase5-dev qttools5-dev\
     qttools5-dev-tools qtwayland5 libqrencode-dev gawk git
-
-ENV BITCOIN_VERSION="v27.1"
 
 RUN git clone https://github.com/bitcoin/bitcoin.git --depth 1 --branch "$BITCOIN_VERSION" /tmp/bitcoin && \
     cd /tmp/bitcoin && \
