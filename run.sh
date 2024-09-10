@@ -1,1 +1,0 @@
-podman run -it -v /home/lordrafa/Rafa/OtherRepos/bitcoin/:/home/ubuntu/bitcoin -v /home/lordrafa/.bitcoin/:/home/ubuntu/.bitcoin ubuntu
