@@ -20,9 +20,11 @@ jobs:
     - name: Tags
       run: |
         docker tag bitcoin ${{ secrets.DOCKER_HUB_USER }}/bitcoin:${{ github.sha }}
+        docker tag bitcoin ${{ secrets.DOCKER_HUB_USER }}/bitcoin:${{ vars.BITCOIN_VERSION }}
         docker tag bitcoin ${{ secrets.DOCKER_HUB_USER }}/bitcoin:latest
     - name: Push
       run: |
         docker push ${{ secrets.DOCKER_HUB_USER }}/bitcoin:${{ github.sha }}
+        docker push ${{ secrets.DOCKER_HUB_USER }}/bitcoin:${{ vars.BITCOIN_VERSION }}
         docker push ${{ secrets.DOCKER_HUB_USER }}/bitcoin:latest
 
